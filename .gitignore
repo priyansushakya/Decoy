@@ -8,8 +8,8 @@ target/
 
 # IntelliJ IDEA specific files
 .idea/
-.iml
-.iws
+*.iml
+*.iws
 
 # Tomcat work and temp files
 logs/

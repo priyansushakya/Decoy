@@ -1,0 +1,127 @@
+@charset "UTF-8";
+@charset "UTF-8";
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-image: url('../Images/PhotoJava1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.form-container {
+    background: #fdfaf0;
+    padding: 2.5rem 3rem;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.7s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1rem;
+    color: #473c38;
+    margin-bottom: 0.5rem;
+}
+
+/* Common styling for input and select fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="file"],
+select {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    background: transparent;
+    transition: all 0.2s ease;
+    color: #473c38;
+    appearance: none;
+    cursor: pointer;
+}
+
+input[type="file"] {
+    background: transparent;
+    cursor: pointer;
+}
+
+input:focus,
+select:focus {
+    border-color: #473c38;
+}
+
+input[readonly] {
+    background: #fdfaf0;
+    cursor: not-allowed;
+}
+
+input[type="submit"],
+button[type="submit"] {
+    background: #473c38;
+    color: white;
+    padding: 1rem;
+    font-size: 1.1rem;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 2rem;
+}
+
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+    background: #64544e;
+    transform: scale(1.02);
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
